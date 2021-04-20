@@ -151,7 +151,7 @@ p {
 }
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 }
 
 .section-center {
@@ -410,7 +410,8 @@ Hero
   }
 }
 
-.hero-img::before {
+.hero-img::before,
+.about-img::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -444,7 +445,36 @@ About
 }
 
 .about-img {
+  position: relative;
+}
+
+.about-img::before {
+  left: -2rem;
+}
+
+.about-img {
   justify-self: center;
+}
+
+@media screen and (min-width: 776px) {
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-img {
+    position: relative;
+  }
+
+  .about-img::before {
+    left: -2rem;
+  }
 }
 /*
 =============== 
